@@ -1,0 +1,32 @@
+<div class="main">
+  <div>
+    Image galery
+  </div>
+</div>
+<div class="space"></div>
+
+<div>
+  <div class="container">
+    <div class="card" *ngFor="let item of arr">
+      <a class="url" href="{{ item.download_url }}">
+        <img class="photos" src="{{ item.download_url }}" alt="" />
+        <div class="text">
+          <div>
+            <a class="text1" href="{{ item.url }}">
+              {{ item.author }}
+            </a>
+          </div>
+          <div class="text2">#{{ item.id }}</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<span class="button">
+  <div>
+    <button class="button1" [disabled]="a == 1" (click)="prev()">Prev</button>
+  </div>
+  <div>
+    <button class="button2" (click)="next()">Next</button>
+  </div>
+</span>
